@@ -8,10 +8,23 @@
 # 3 6 9 12 15 18
 # 6 12
 
-n = int(input("Введите кол-во элементов первого множества: "))
-m = int(input("Введите кол-во элементов второго множества: "))
-print('Ввод элементов первого множества.')
-set1 = {int(input(f'Введите элемент № {i}: ')) for i in range(n)}
-print('Ввод элементов второго множества.')
-set2 = {int(input(f'Введите элемент № {i}: ')) for i in range(m)}
-print(*set1.intersection(set2))
+# n = int(input("Введите кол-во элементов первого множества: "))
+# m = int(input("Введите кол-во элементов второго множества: "))
+# print('Ввод элементов первого множества')
+# set1 = {int(input(f'Введите элемент № {i}: ')) for i in range(n)}
+# print('Ввод элементов второго множества')
+# set2 = {int(input(f'Введите элемент № {i}: ')) for i in range(m)}
+# print(*sorted(set1.intersection(set2)))
+
+print('Введите через пробел кол-во элементов первого и второго множества')
+n,m = [int(x) for x in input().split()[:2]]  
+
+print(f'Введите чисел через пробел: {n}')
+list_1 = [int(x) for x in input().split()[:n]]
+set_1 = set(list_1)
+
+print(f'Введите чисел через пробел: {m}')
+list_2 = [int(x) for x in input().split()[:m]]
+set_2 = set(list_2)
+print('Встречающиеся числа в обоих множествах')
+print(*sorted(set_1.intersection(set_2)))

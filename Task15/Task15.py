@@ -6,7 +6,7 @@
 import random
 
 n = int(input('Введите количество арбузов: '))
-1   :
+while n < 1:
     print('Введены неверные данные')
     n = int(input('Введите количество арбузов: '))
 
@@ -21,7 +21,7 @@ for i in range(2, n + 1):
     print(f'Арбуз № {i} весит - {numb}')
     if numb > max1:
         max1 = numb
-    elif   numb<min1:
+    elif numb < min1:
         min1 = numb
 
-print(f'\n Минимальная масса: {min1} Максимальная масса: {max1}')
+print(f'\n Минимальная масса: {min1}  Максимальная масса: {max1}')
